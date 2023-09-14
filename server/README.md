@@ -13,4 +13,5 @@
     * 301 - Resource moved
     * 404 - Not Found
     * 500 - Internal Server Error
+<br>
 ![status codes](statuscode.png)
