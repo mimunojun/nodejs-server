@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 
 // express app
 const app = express();
@@ -9,6 +10,10 @@ app.set('view engine', 'ejs'); // app settings
 
 // listen for requests
 app.listen(3000); // port 3000
+
+// middleware & static files
+app.use(express.static('public')); // inside the folder called public will be available; they could be accessed without stating like "/public/styles.css", but just "/styles.css"
+app.use(morgan('dev'));
 
 app.get('/', (req, res) => {    // first arg: what link it listen to, second arg: what to do
     // res.send('<p>home page</p>');
